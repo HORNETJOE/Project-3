@@ -1,0 +1,66 @@
+#include <iostream> 
+#include <fstream> 
+#include <string> 
+#include <cstdlib> 
+#include <map>
+
+using namespace std;
+
+string answer;
+
+int lastScore;
+  
+void solution(string a, string w){ // Give no return on the two strings
+   if (  answer.length() > w.length()) return; // returns the string for the user if the solution is retrieved. 
+  int currentScore = 0;  // sets currentScore variable score to 0
+  map<char, int> reapeatedChars; // map is what stores the score to the values and can search for them when they are retrieved
+  
+  for(unsigned i=0; i < a.length(); i++) {  // Score system, each letter has one point
+    for(unsigned j=0; j < w.length(); j++) { //  if letter is found in anagram that is in dictionary, gives one point 
+    if(a[i] == w[j]){ // if a character [i] = w character [j] 
+      reapeatedChars[w[j]]++; 
+    if(reapeatedChars[w[j]] == 1){ 
+      currentScore++;
+        }
+      }
+    }
+  }
+  if(currentScore > lastScore){  // currentScore is bigger lastScore, give answer
+      answer = w; // answer being known as w
+      lastScore = currentScore; // gives the answer.
+  }
+}
+  
+  
+  
+int main() {
+  string filename = "Words.csv";//this is the name of the file that contains all the words.
+
+  
+       string userin;
+  do {
+    cout << "Please enter 3 letters: "; //this section of the code needs the user to enter three letters into the program that will then be used to search the "Word" document.
+    getline(cin, userin); 
+  } while(userin.length() > 3); //this will set the length of the answer that the user can enter at three.
+  
+  
+     // Read from the file.
+   ifstream fin(filename.c_str());  // This section of code will read the file containing the many diffrent words.
+      if (!fin) { // the "fin" in the code is the file being opened and the ! allows the file to be true or false depending on the senario.
+        cout << "error file not able to retrieve"; // this error message will display if the file is unable to be found.
+      abort(); // after the file can't be found it will exit the file.
+   }
+    string line; 
+    
+    while (fin >> line) {  
+    
+      if(userin.length() >= line.length()){  // This is the checking the lenght of the line.
+        solution(userin, line);
+      }
+    }
+    
+   fin.close();  // close the file and disconnects it with the program after it is done with it.
+   
+   cout << "Best Solution: " << answer << endl; // This prints out best solution out of 3 letters.
+   return 0;
+}
