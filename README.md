@@ -12,4 +12,4 @@ the debugging process and debugging facilities in my chosen IDE helped when find
 Coding standards and needed when coding because it makes the code more understandable for other users looking the code or just updates and maintains of the code for the original creator. These standards can be shown through comments made on the code talking about what does what.
 ## Evaluation: How debugging process helped
 the debugging process helped with fixing the code because it allowed me to see the errors in the code and correct them to keep the code working.
-![Repl-IT](https://raw.githubusercontent.com/HORNETJOE/Project-3/master/Capture.PNG)
+![Repl-IT](https://github.com/HORNETJOE/Project-3/blob/master/repl-it.PNG)
