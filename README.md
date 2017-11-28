@@ -1,6 +1,9 @@
 # Project-3
 ## Introduction
 Project 3 is an application that will allow the user to enter three letters into an anagram solver which will then search through a three letter dictionary to find the biggest word it can make using those three letters.
+
+![flowchart](https://github.com/HORNETJOE/Project-3/blob/master/Flowchart.jpeg)
+
 # Design Documentation
 ## Process of implementation Algorithm
 the process of creating a application that could take three letters and then find the largest word it can using those three letters 
