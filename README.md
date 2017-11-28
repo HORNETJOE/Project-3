@@ -3,7 +3,7 @@
 Project 3 is an application that will allow the user to enter three letters into an anagram solver which will then search through a three letter dictionary to find the biggest word it can make using those three letters.
 # Design Documentation
 ## Process of implementation Algorithm
-the process of implementing the algorithm that would check with the next number to appear is higher or lower based on the user’s guess was a challenge but was achievable.
+the process of creating a application that could take three letters and then find the largest word it can using those three letters 
 ## Description of IDE used and features it provided
 the IDE that was used was a website called Repl.it and it allowed me to write the program in the language I wanted and because it was located on a website i was able to access it anywhere that had internet connection.
 ## Debugging process and debugging facilities in your chosen IDE
